@@ -77,7 +77,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Stock
     Route::delete('stocks/destroy', 'StockController@massDestroy')->name('stocks.massDestroy');
     Route::resource('stocks', 'StockController');
+
+    // Ticket
+    Route::delete('tickets/destroy', 'TicketController@massDestroy')->name('tickets.massDestroy');
+    Route::post('tickets/media', 'TicketController@storeMedia')->name('tickets.storeMedia');
+    Route::post('tickets/ckmedia', 'TicketController@storeCKEditorImages')->name('tickets.storeCKEditorImages');
+    Route::resource('tickets', 'TicketController');
+
+    // Reply
+    Route::delete('replies/destroy', 'ReplyController@massDestroy')->name('replies.massDestroy');
+    Route::resource('replies', 'ReplyController');
+
 });
+
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
     if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php'))) {
