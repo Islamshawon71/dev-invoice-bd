@@ -136,6 +136,16 @@
                 @endcan
 
 
+                @can('ticket_access')
+                <li>
+                    <a href="{{ route("admin.tickets.index") }}">
+                        <i data-feather="send"></i>
+                        <span data-key="t-horizontal">{{ trans('cruds.ticket.title') }}</span>
+                    </a>
+                </li>
+                @endcan
+
+
                 @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
                     @can('profile_password_edit')
                         <li>

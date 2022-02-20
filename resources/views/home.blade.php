@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-xl-2 col-md-6">
                     <a href="{{ url('/admin/orders') }}">
-                    <div class="card bg-secondary border-secondary text-white-50">                   
+                    <div class="card bg-secondary border-secondary text-white-50">
                         <div class="card-body">
                             <h5 class="mb-3 text-white">Total Orders</h5>
                             <h4 class="mb-3 text-white">
