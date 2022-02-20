@@ -26,16 +26,14 @@
                     </div>
                 </div>
                 <div class="col-xl-2 col-md-6">
-                    <a href="{{ url('/admin/orders') }}">
                     <div class="card bg-secondary border-secondary text-white-50">
                         <div class="card-body">
-                            <h5 class="mb-3 text-white">Total Orders</h5>
+                            <h5 class="mb-3 text-white">Todays Orders</h5>
                             <h4 class="mb-3 text-white">
                                 <span class="counter-value text-white" data-target="{{ $orders }}">0</span>
                             </h4>
                         </div>
                     </div>
-                    </a>
                 </div>
                 <div class="col-xl-2 col-md-6">
                     <a href="{{ url('/admin/shops') }}">
@@ -87,12 +85,11 @@
             </div>
 
             <div class="row">
-
                 <div class="col-xl-2 col-md-6">
                     <a href="{{ url('/admin/orders') }}">
                     <div class="card bg-primary border-primary text-white-50">
                         <div class="card-body">
-                            <h5 class="mb-3 text-white">Today Orders</h5>
+                            <h5 class="mb-3 text-white">Total Orders</h5>
                             <h4 class="mb-3 text-white">
                                 $<span class="counter-value text-white" data-target="865.2">0</span>k
                             </h4>
