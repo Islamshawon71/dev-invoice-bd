@@ -26,49 +26,52 @@
                     </div>
                 </div>
                 <div class="col-xl-2 col-md-6">
-                    <div class="card bg-secondary border-secondary text-white-50">
                     <a href="{{ url('/admin/orders') }}">
+                    <div class="card bg-secondary border-secondary text-white-50">                   
                         <div class="card-body">
                             <h5 class="mb-3 text-white">Total Orders</h5>
                             <h4 class="mb-3 text-white">
                                 <span class="counter-value text-white" data-target="{{ $orders }}">0</span>
                             </h4>
                         </div>
-                    </a>
                     </div>
+                    </a>
                 </div>
                 <div class="col-xl-2 col-md-6">
+                    <a href="{{ url('/admin/shops') }}">
                     <div class="card bg-secondary border-secondary text-white-50">
                         <div class="card-body">
-                        <a href="{{ url('/admin/shops') }}">
                             <h5 class="mb-3 text-white">Total Shop</h5>
                             <h4 class="mb-3 text-white">
                                 $<span class="counter-value text-white" data-target="{{ $shop }}">0</span>k
                             </h4>
-                        </a>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-2 col-md-6">
+                    <a href="{{ url('/admin/products') }}">
                     <div class="card bg-secondary border-secondary text-white-50">
                         <div class="card-body">
                             <h5 class="mb-3 text-white">Total Products</h5>
                             <h4 class="mb-3 text-white">
                                 $<span class="counter-value text-white" data-target="{{ $product }}">0</span>k
                             </h4>
-
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-xl-2 col-md-6">
-                    <div class="card bg-secondary border-secondary text-white-50">
-                        <div class="card-body">
-                            <h5 class="mb-3 text-white">Total Customers</h5>
-                            <h4 class="mb-3 text-white">
-                                $<span class="counter-value text-white" data-target="{{ $customer }}">0</span>k
-                            </h4>
+                    <a href="{{ url('/admin/customers') }}">
+                        <div class="card bg-secondary border-secondary text-white-50">
+                            <div class="card-body">
+                                <h5 class="mb-3 text-white">Total Customers</h5>
+                                <h4 class="mb-3 text-white">
+                                    $<span class="counter-value text-white" data-target="{{ $customer }}">0</span>k
+                                </h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-xl-2 col-md-6">
                     <div class="card bg-secondary border-secondary text-white-50">
