@@ -72,7 +72,7 @@ body .card-header {
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                            <a href="index.html" class="logo logo-dark">
+                            <a href="{{ url('/') }}" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <span class="logo-txt">IB</span>
                                 </span>
@@ -81,7 +81,7 @@ body .card-header {
                                 </span>
                             </a>
 
-                            <a href="index.html" class="logo logo-light">
+                            <a href="{{ url('/') }}" class="logo logo-light">
                                 <span class="logo-sm">
                                     <span class="logo-txt">IB</span>
                                 </span>
@@ -194,11 +194,11 @@ body .card-header {
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Minia.
+                                <script>document.write(new Date().getFullYear())</script> © TechJodo.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Design & Develop by <a href="#!" class="text-decoration-underline">Themesbrand</a>
+                                    Design & Develop by <a href="#!" class="text-decoration-underline">TechJodo</a>
                                 </div>
                             </div>
                         </div>
