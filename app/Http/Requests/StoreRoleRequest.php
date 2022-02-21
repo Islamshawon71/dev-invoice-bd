@@ -28,6 +28,46 @@ class StoreRoleRequest extends FormRequest
                 'required',
                 'array',
             ],
+            'price' => [
+                'required',
+            ],
+            'validity' => [
+                'required',
+            ],
+            'products_limit' => [
+                'required',
+                'nullable',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
+            'shop_limit' => [
+                'required',
+                'nullable',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
+            'customers_limit' => [
+                'required',
+                'nullable',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
+            'orders_limit' => [
+                'required',
+                'nullable',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
+            'stock_management' => [
+                'required',
+            ],
+            'new_courier_add' => [
+                'required',
+            ],
         ];
     }
 }

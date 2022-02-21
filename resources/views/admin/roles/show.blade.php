@@ -41,6 +41,78 @@
                             @endforeach
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.price') }}
+                        </th>
+                        <td>
+                            {{ $role->price }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.features') }}
+                        </th>
+                        <td>
+                            {!! $role->features !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.validity') }}
+                        </th>
+                        <td>
+                            {{ App\Models\Role::VALIDITY_SELECT[$role->validity] ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.products_limit') }}
+                        </th>
+                        <td>
+                            {{ $role->products_limit }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.shop_limit') }}
+                        </th>
+                        <td>
+                            {{ $role->shop_limit }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.customers_limit') }}
+                        </th>
+                        <td>
+                            {{ $role->customers_limit }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.orders_limit') }}
+                        </th>
+                        <td>
+                            {{ $role->orders_limit }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.stock_management') }}
+                        </th>
+                        <td>
+                            {{ App\Models\Role::STOCK_MANAGEMENT_SELECT[$role->stock_management] ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.role.fields.new_courier_add') }}
+                        </th>
+                        <td>
+                            {{ App\Models\Role::NEW_COURIER_ADD_SELECT[$role->new_courier_add] ?? '' }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

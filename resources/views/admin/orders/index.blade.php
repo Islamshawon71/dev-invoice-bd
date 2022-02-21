@@ -17,28 +17,29 @@
     }
 </style>
 <div class="order-tabs">
-    <div class="">
+    <div class="pt-0">
         <a href="{{ url('admin/orders') }}">
             <div class="card mb-0">
-                <div class="card-body shadow">
-                    <h5 class="mb-2">All Orders</h5>
-                    <h4 class="mb-1">
+                <div class="card-body shadow p-3">
+                    <h2 class="mb-1">
                         <span class="counter-value all-orders">0</span>
-                    </h4>
+                    </h2>
+                    <p class="mb-1 text-black-50">All Orders</p>
+
                 </div>
             </div>
         </a>
     </div>
 @foreach(App\Models\Order::STATUS_SELECT as $key => $label)
     {{-- <option value="{{ $key }}" {{ old('status', $order->status) === (string) $key ? 'selected' : '' }}>{{ $label }}</option> --}}
-    <div class="">
+    <div class="pt-0">
         <a href="{{ url('admin/orders?status='.$label) }}">
             <div class="card mb-0">
-                <div class="card-body shadow">
-                    <h5 class="mb-2">{{ $label }}</h5>
-                    <h4 class="mb-1">
+                <div class="card-body shadow p-3">
+                    <h2 class="mb-1">
                         <span class="counter-value {{ strtolower(str_replace(' ', '-', $label)) }}">0</span>
-                    </h4>
+                    </h2>
+                    <p class="mb-1 text-black-50">{{ $label }}</p>
                 </div>
             </div>
         </a>
