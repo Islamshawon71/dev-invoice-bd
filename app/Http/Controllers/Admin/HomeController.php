@@ -17,6 +17,11 @@ class HomeController
         $product = Product::all()->count();
         $customer = Customer::all()->count();
 
-        return view('home',compact('orders','shop','product','customer'));
+        $balance = 0;
+        if (class_exists('App\Models\Order')) {
+            $balance = Order::where('status' ,'Delivered')->sum('total_bill');
+        }
+
+        return view('home',compact('orders','shop','product','customer','balance'));
     }
 }

@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <h5 class="mb-3 text-white">My Balance</h5>
                             <h4 class="mb-3 text-white">
-                                $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                <span class="counter-value text-white" data-target="{{ $balance }}">0</span> BDT
                             </h4>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="col-xl-2 col-md-6">
                     <div class="card bg-secondary border-secondary text-white-50">
                         <div class="card-body">
-                            <h5 class="mb-3 text-white">Todays Orders</h5>
+                            <h5 class="mb-3 text-white">Total Orders</h5>
                             <h4 class="mb-3 text-white">
                                 <span class="counter-value text-white" data-target="{{ $orders }}">0</span>
                             </h4>
@@ -37,26 +37,27 @@
                 </div>
                 <div class="col-xl-2 col-md-6">
                     <a href="{{ url('/admin/shops') }}">
-                    <div class="card bg-secondary border-secondary text-white-50">
-                        <div class="card-body">
-                            <h5 class="mb-3 text-white">Total Shop</h5>
-                            <h4 class="mb-3 text-white">
-                                $<span class="counter-value text-white" data-target="{{ $shop }}">0</span>k
-                            </h4>
-                            </a>
+                        <div class="card bg-secondary border-secondary text-white-50">
+                            <div class="card-body">
+                                <h5 class="mb-3 text-white">Total Shop</h5>
+                                <h4 class="mb-3 text-white">
+                                    <span class="counter-value text-white" data-target="{{ $shop }}">0</span>
+                                </h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
                 <div class="col-xl-2 col-md-6">
                     <a href="{{ url('/admin/products') }}">
-                    <div class="card bg-secondary border-secondary text-white-50">
-                        <div class="card-body">
-                            <h5 class="mb-3 text-white">Total Products</h5>
-                            <h4 class="mb-3 text-white">
-                                $<span class="counter-value text-white" data-target="{{ $product }}">0</span>k
-                            </h4>
+                        <div class="card bg-secondary border-secondary text-white-50">
+                            <div class="card-body">
+                                <h5 class="mb-3 text-white">Total Products</h5>
+                                <h4 class="mb-3 text-white">
+                                    <span class="counter-value text-white" data-target="{{ $product }}">0</span>
+                                </h4>
+                            </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col-xl-2 col-md-6">
@@ -65,7 +66,7 @@
                             <div class="card-body">
                                 <h5 class="mb-3 text-white">Total Customers</h5>
                                 <h4 class="mb-3 text-white">
-                                    $<span class="counter-value text-white" data-target="{{ $customer }}">0</span>k
+                                    <span class="counter-value text-white" data-target="{{ $customer }}">0</span>
                                 </h4>
                             </div>
                         </div>
@@ -76,7 +77,7 @@
                         <div class="card-body">
                             <h5 class="mb-3 text-white">SMS Balance</h5>
                             <h4 class="mb-3 text-white">
-                                $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                <span class="counter-value text-white" data-target="865.2">0</span>/100
                             </h4>
                         </div>
                     </div>
@@ -89,9 +90,9 @@
                     <a href="{{ url('/admin/orders') }}">
                     <div class="card bg-primary border-primary text-white-50">
                         <div class="card-body">
-                            <h5 class="mb-3 text-white">Total Orders</h5>
+                            <h5 class="mb-3 text-white">Today Orders</h5>
                             <h4 class="mb-3 text-white">
-                                $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                <span class="counter-value text-white" data-target="865.2">0</span>
                             </h4>
                         </div>
                     </div>
@@ -103,7 +104,7 @@
                         <div class="card-body">
                             <h5 class="mb-3 text-white">Processing</h5>
                             <h4 class="mb-3 text-white">
-                                $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                <span class="counter-value text-white" data-target="865.2">0</span>
                             </h4>
                         </div>
                     </div>
@@ -115,7 +116,7 @@
                             <div class="card-body">
                                 <h5 class="mb-3 text-white">On hold</h5>
                                 <h4 class="mb-3 text-white">
-                                    $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                    <span class="counter-value text-white" data-target="865.2">0</span>
                                 </h4>
                             </div>
                         </div>
@@ -126,7 +127,7 @@
                             <div class="card-body">
                                 <h5 class="mb-3 text-white">Completed</h5>
                                 <h4 class="mb-3 text-white">
-                                    $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                    <span class="counter-value text-white" data-target="865.2">0</span>
                                 </h4>
                             </div>
                         </div>
@@ -139,7 +140,7 @@
                             <div class="card-body">
                                 <h5 class="mb-3 text-white">Cancelled</h5>
                                 <h4 class="mb-3 text-white">
-                                    $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                    <span class="counter-value text-white" data-target="865.2">0</span>
                                 </h4>
                             </div>
                         </div>
@@ -151,7 +152,7 @@
                             <div class="card-body">
                                 <h5 class="mb-3 text-white">Shipped</h5>
                                 <h4 class="mb-3 text-white">
-                                    $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                    <span class="counter-value text-white" data-target="865.2">0</span>
                                 </h4>
                             </div>
                         </div>
@@ -164,7 +165,7 @@
                             <div class="card-body">
                                 <h5 class="mb-3 text-white">Delivered</h5>
                                 <h4 class="mb-3 text-white">
-                                    $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                    <span class="counter-value text-white" data-target="865.2">0</span>
                                 </h4>
                             </div>
                         </div>
@@ -177,7 +178,7 @@
                             <div class="card-body">
                                 <h5 class="mb-3 text-white">Returned</h5>
                                 <h4 class="mb-3 text-white">
-                                    $<span class="counter-value text-white" data-target="865.2">0</span>k
+                                    <span class="counter-value text-white" data-target="865.2">0</span>
                                 </h4>
                             </div>
                         </div>
