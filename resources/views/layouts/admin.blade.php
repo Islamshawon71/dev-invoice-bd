@@ -296,10 +296,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
-=======
->>>>>>> parent of 47c655b (Package Create By role)
 =======
 >>>>>>> parent of 47c655b (Package Create By role)
 =======
