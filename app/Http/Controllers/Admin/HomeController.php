@@ -21,7 +21,6 @@ class HomeController
         if (class_exists('App\Models\Order')) {
             $balance = Order::where('status' ,'Delivered')->sum('total_bill');
         }
-
         return view('home',compact('orders','shop','product','customer','balance'));
     }
 }
