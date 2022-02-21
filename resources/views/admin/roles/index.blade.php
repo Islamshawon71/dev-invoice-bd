@@ -1,19 +1,21 @@
 @extends('layouts.admin')
 @section('content')
-@can('role_create')
-    <div style="margin-bottom: 10px;" class="row">
-        <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.roles.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.role.title_singular') }}
-            </a>
+<div class="card">
+
+    <div class="card-header">
+        <div class="row">
+            <div class="col-lg-6 col-6">
+                Total <span class="count">0</span> {{ trans('cruds.role.title_singular') }} {{ trans('global.list') }}
+            </div>
+            <div class="col-lg-6 col-6 action-button">
+                @can('role_create')
+                    <a class="btn btn-sm btn-success float-right" href="{{ route('admin.roles.create') }}">
+                        {{ trans('global.add') }} {{ trans('cruds.role.title_singular') }}
+                    </a>
+                @endcan
+            </div>
         </div>
     </div>
-@endcan
-<div class="card">
-    <div class="card-header">
-        {{ trans('cruds.role.title_singular') }} {{ trans('global.list') }}
-    </div>
-
     <div class="card-body">
         <div class="table-responsive">
             <table class=" table table-bordered table-striped table-hover datatable datatable-Role">
@@ -145,7 +147,7 @@
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.roles.massDestroy') }}",
-    className: 'btn-danger',
+    className: 'btn-sm btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
           return $(entry).data('entry-id')
@@ -174,6 +176,11 @@
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
     pageLength: 100,
+    footerCallback: function ( ) {
+        var api = this.api();
+        var numRows = api.rows().count();
+        $('.count').empty().append(numRows);
+    }
   });
   let table = $('.datatable-Role:not(.ajaxTable)').DataTable({ buttons: dtButtons })
   $('a[data-toggle="tab"]').on('shown.bs.tab click', function(e){

@@ -177,7 +177,7 @@ class OrderController extends Controller
 
         $shops = Shop::pluck('shop_name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $order->load('customer', 'courier', 'shop', 'created_by');
+        $order->load('customer', 'courier', 'shop', 'created_by','products');
 
         return view('admin.orders.edit', compact('couriers', 'customers', 'order', 'shops'));
     }
