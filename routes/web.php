@@ -13,6 +13,9 @@ Route::get('/home', function () {
 
     return redirect()->route('admin.home');
 });
+Route::get('/package', function () {
+    return view('package');
+});
 
 Auth::routes(['register' => false]);
 
