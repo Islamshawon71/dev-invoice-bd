@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/clear-cache', function() {
-    Artisan::call('cache:clear');
+    Artisan::call('optimize:clear');
     return "Cache is cleared";
 });
 
@@ -24,6 +24,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // Roles
     Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');
+    Route::post('roles/media', 'RolesController@storeMedia')->name('roles.storeMedia');
+    Route::post('roles/ckmedia', 'RolesController@storeCKEditorImages')->name('roles.storeCKEditorImages');
     Route::resource('roles', 'RolesController');
 
     // Users
