@@ -13,6 +13,9 @@ use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
+use Xenon\LaravelBDSms\Facades\SMS;
+
+
 
 class SendSmsController extends Controller
 {
@@ -78,6 +81,9 @@ class SendSmsController extends Controller
 
     public function store(StoreSendSmsRequest $request)
     {
+
+        $sms = SMS::shoot($request->customer_number, $request->sms_content);
+
         $sendSms = SendSms::create($request->all());
 
         return redirect()->route('admin.send-sms.index');
