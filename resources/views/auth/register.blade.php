@@ -129,7 +129,7 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">আপনার নাম </label>

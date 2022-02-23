@@ -12,7 +12,6 @@
                 <div class="card-header">
                     Customer Details
                 </div>
-
                 <div class="card-body">
                     @csrf
                     <div class="row">

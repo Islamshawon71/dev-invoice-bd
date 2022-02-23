@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Shop;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -50,6 +51,11 @@ class RegisterController extends Controller
             'name'     => ['required', 'string', 'max:255'],
             'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'phone' => ['required', 'string'],
+            'shop_name' => ['required', 'string'],
+            'shop_address' => ['required', 'string'],
+            'shop_phone_number' => ['required', 'string'],
+            'shop_name' => ['required', 'string'],
         ]);
     }
 
@@ -60,10 +66,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name'     => $data['name'],
             'email'    => $data['email'],
             'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password']),
         ]);
+        $user->roles()->sync(1);
+        $shop  = New Shop();
+        $shop->shop_name = $data['shop_name'];
+        $shop->shop_address = $data['shop_address'];
+        $shop->shop_phone_number = $data['shop_phone_number'];
+        $shop->shop_name = $data['shop_name'];
+        $shop->status = 'Active';
+        $shop->created_by_id = $user->id;
+        $shop->save();
+        return $user;
     }
 }

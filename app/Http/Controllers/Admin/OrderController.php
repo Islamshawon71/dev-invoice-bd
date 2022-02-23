@@ -27,7 +27,7 @@ class OrderController extends Controller
         abort_if(Gate::denies('order_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         if ($request->ajax()) {
-            $query = Order::with(['customer', 'courier', 'shop', 'created_by','products'])->select(sprintf('%s.*', (new Order())->table));
+            $query = Order::with(['customer', 'courier', 'shop','products', 'created_by'])->select(sprintf('%s.*', (new Order())->table));
             if($request->status){
                 $query->where('status','like','%'.$request->status.'%');
             }
