@@ -1,5 +1,7 @@
 <?php
 
+
+
 Route::get('/clear-cache', function() {
     Artisan::call('optimize:clear');
     return "Cache is cleared";
