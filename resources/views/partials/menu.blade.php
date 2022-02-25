@@ -173,7 +173,7 @@
                     <div class="mt-4">
                         <h5 class="alertcard-title font-size-16">Unlimited Access</h5>
                         <p class="font-size-13">Upgrade your plan from a Free trial, to select ‘Business Plan’.</p>
-                        <a href="#!" class="btn btn-sm btn-primary mt-2">Upgrade Now</a>
+                        <a href="{{ url('/package') }}" class="btn text-white btn-sm btn-primary mt-2">Upgrade Now</a>
                     </div>
                 </div>
             </div>
